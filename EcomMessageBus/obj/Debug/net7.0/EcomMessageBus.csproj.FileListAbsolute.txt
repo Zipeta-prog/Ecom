@@ -1,0 +1,12 @@
+C:\Users\USER\source\repos\Ecom-Ms\EcomMessageBus\bin\Debug\net7.0\EcomMessageBus.deps.json
+C:\Users\USER\source\repos\Ecom-Ms\EcomMessageBus\bin\Debug\net7.0\EcomMessageBus.dll
+C:\Users\USER\source\repos\Ecom-Ms\EcomMessageBus\bin\Debug\net7.0\EcomMessageBus.pdb
+C:\Users\USER\source\repos\Ecom-Ms\EcomMessageBus\obj\Debug\net7.0\EcomMessageBus.csproj.AssemblyReference.cache
+C:\Users\USER\source\repos\Ecom-Ms\EcomMessageBus\obj\Debug\net7.0\EcomMessageBus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\source\repos\Ecom-Ms\EcomMessageBus\obj\Debug\net7.0\EcomMessageBus.AssemblyInfoInputs.cache
+C:\Users\USER\source\repos\Ecom-Ms\EcomMessageBus\obj\Debug\net7.0\EcomMessageBus.AssemblyInfo.cs
+C:\Users\USER\source\repos\Ecom-Ms\EcomMessageBus\obj\Debug\net7.0\EcomMessageBus.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\Ecom-Ms\EcomMessageBus\obj\Debug\net7.0\EcomMessageBus.dll
+C:\Users\USER\source\repos\Ecom-Ms\EcomMessageBus\obj\Debug\net7.0\refint\EcomMessageBus.dll
+C:\Users\USER\source\repos\Ecom-Ms\EcomMessageBus\obj\Debug\net7.0\EcomMessageBus.pdb
+C:\Users\USER\source\repos\Ecom-Ms\EcomMessageBus\obj\Debug\net7.0\ref\EcomMessageBus.dll

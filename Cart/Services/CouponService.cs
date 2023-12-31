@@ -1,0 +1,27 @@
+﻿using Cart.Models.Dtos;
+using Newtonsoft.Json;
+
+namespace Cart.Services
+{
+    public class CouponService
+    {
+        private readonly IHttpClientFactory _httpClientFactory;
+        public CouponService(IHttpClientFactory httpClientFactory)
+        {
+            _httpClientFactory = httpClientFactory;
+        }
+
+        public async Task<CouponDto> GetCouponByCouponCode(string couponCode)
+        {
+            var client = _httpClientFactory.CreateClient("Coupons");
+            var response = await client.GetAsync(couponCode);
+            var content = await response.Content.ReadAsStringAsync();
+            var responseDto = JsonConvert.DeserializeObject<ResponseDto>(content);
+            if (responseDto.Result != null && response.IsSuccessStatusCode)
+            {
+                return JsonConvert.DeserializeObject<CouponDto>(responseDto.Result.ToString());
+            }
+            return new CouponDto();
+        }
+    }
+}
