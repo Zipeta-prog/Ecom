@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using Coupon.Models;
 using Coupon.Models.Dtos;
+using Coupon.Models;
 
 namespace Coupon.Profiles
 {
@@ -8,7 +8,6 @@ namespace Coupon.Profiles
     {
         public class CouponProfile : Profile
         {
-
             public CouponProfile()
             {
                 CreateMap<AddCouponDto, Coupons>().ReverseMap();

@@ -17,7 +17,6 @@ namespace Auth.Models.Dtos
         [Required]
         public string PhoneNumber { get; set; } = string.Empty;
 
-        public string? Role { get; set; } = "User"; //nipeleke kwa gihub account yako
-
+        public string? Role { get; set; } = "User";
     }
 }

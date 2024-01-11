@@ -1,0 +1,22 @@
+﻿@inherits LayoutComponentBase
+
+<PageTitle>Server</PageTitle>
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4 d-flex justify-content-end">
+            <!-- Cart Icon -->
+            <a href="/CartPage" class="text-decoration-none text-dark">
+                <span class="oi oi-cart p-2" style="font-size: 24px;"></span>
+            </a>
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>

@@ -64,6 +64,7 @@ C:\Users\USER\source\repos\Ecom-Ms\Auth\obj\Debug\net7.0\Auth.AssemblyInfo.cs
 C:\Users\USER\source\repos\Ecom-Ms\Auth\obj\Debug\net7.0\Auth.csproj.CoreCompileInputs.cache
 C:\Users\USER\source\repos\Ecom-Ms\Auth\obj\Debug\net7.0\Auth.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\USER\source\repos\Ecom-Ms\Auth\obj\Debug\net7.0\Auth.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\USER\source\repos\Ecom-Ms\Auth\obj\Debug\net7.0\Auth.sourcelink.json
 C:\Users\USER\source\repos\Ecom-Ms\Auth\obj\Debug\net7.0\staticwebassets.build.json
 C:\Users\USER\source\repos\Ecom-Ms\Auth\obj\Debug\net7.0\staticwebassets.development.json
 C:\Users\USER\source\repos\Ecom-Ms\Auth\obj\Debug\net7.0\staticwebassets\msbuild.Auth.Microsoft.AspNetCore.StaticWebAssets.props
@@ -78,9 +79,3 @@ C:\Users\USER\source\repos\Ecom-Ms\Auth\obj\Debug\net7.0\refint\Auth.dll
 C:\Users\USER\source\repos\Ecom-Ms\Auth\obj\Debug\net7.0\Auth.pdb
 C:\Users\USER\source\repos\Ecom-Ms\Auth\obj\Debug\net7.0\Auth.genruntimeconfig.cache
 C:\Users\USER\source\repos\Ecom-Ms\Auth\obj\Debug\net7.0\ref\Auth.dll
-C:\Users\USER\source\repos\Ecom-Ms\Auth\bin\Debug\net7.0\Azure.Core.Amqp.dll
-C:\Users\USER\source\repos\Ecom-Ms\Auth\bin\Debug\net7.0\Azure.Messaging.ServiceBus.dll
-C:\Users\USER\source\repos\Ecom-Ms\Auth\bin\Debug\net7.0\Microsoft.Azure.Amqp.dll
-C:\Users\USER\source\repos\Ecom-Ms\Auth\bin\Debug\net7.0\Newtonsoft.Json.dll
-C:\Users\USER\source\repos\Ecom-Ms\Auth\bin\Debug\net7.0\EcomMessageBus.dll
-C:\Users\USER\source\repos\Ecom-Ms\Auth\bin\Debug\net7.0\EcomMessageBus.pdb

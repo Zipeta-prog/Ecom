@@ -1,5 +1,5 @@
-﻿using Auth.Models;
-using Auth.Models.Dtos;
+﻿using Auth.Models.Dtos;
+using Auth.Models;
 using AutoMapper;
 
 namespace Auth.Profiles
@@ -8,10 +8,10 @@ namespace Auth.Profiles
     {
         public AuthProfiles()
         {
-            CreateMap<RegisterUserDto, Buyers>()
+            CreateMap<RegisterUserDto, ApplicationUser>()
                 .ForMember(dest => dest.UserName, src => src.MapFrom(r => r.Email));
 
-            CreateMap<UserDto, Buyers>().ReverseMap();
+            CreateMap<UserDto, ApplicationUser>().ReverseMap();
         }
     }
 }

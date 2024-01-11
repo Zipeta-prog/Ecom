@@ -4,7 +4,6 @@ using Coupon.Services.IService;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Stripe;
 
 namespace Coupon.Controllers
 {
@@ -66,16 +65,16 @@ namespace Coupon.Controllers
 
             //add coupon to stripe
 
-            var options = new CouponCreateOptions()
-            {
-                AmountOff = (long)newCoupon.CouponAmount * 100,
-                Currency = "kes",
-                Id = newCoupon.CouponCode,
-                Name = newCoupon.CouponCode
-            };
+        //    var options = new CouponCreateOptions()
+        //    {
+        //        AmountOff = (long)newCoupon.CouponAmount * 100,
+        //        Currency = "kes",
+        //        Id = newCoupon.CouponCode,
+        //        Name = newCoupon.CouponCode
+        //    };
 
-            var service = new Stripe.CouponService();
-            service.Create(options);
+        //    var service = new Stripe.CouponService();
+        //    service.Create(options);
 
             return Created("", _response);
         }
@@ -85,26 +84,26 @@ namespace Coupon.Controllers
         public async Task<ActionResult<ResponseDto>> updateCoupon(Guid Id, AddCouponDto UCoupon)
         {
             var coupon = await _couponService.GetCoupon(Id);
-            if (coupon == null)
+              if (coupon == null)
             {
-                _response.Result = "Coupon Not Found";
-                _response.IsSuccess = false;
+               _response.Result = "Coupon Not Found";
+               _response.IsSuccess = false;
                 return NotFound(_response);
             }
             _mapper.Map(UCoupon, coupon);
             var res = await _couponService.UpdateCoupon();
-            var service = new Stripe.CouponService();
-            service.Delete(coupon.CouponCode);
+        //    var service = new Stripe.CouponService();
+        //    service.Delete(coupon.CouponCode);
 
-            var options = new CouponCreateOptions()
-            {
-                AmountOff = (long)UCoupon.CouponAmount * 100,
-                Currency = "kes",
-                Id = UCoupon.CouponCode,
-                Name = UCoupon.CouponCode
-            };
+        //    var options = new CouponCreateOptions()
+        //    {
+        //        AmountOff = (long)UCoupon.CouponAmount * 100,
+        //        Currency = "kes",
+        //        Id = UCoupon.CouponCode,
+        //        Name = UCoupon.CouponCode
+        //    };
 
-            service.Create(options);
+        //    service.Create(options);
 
 
             _response.Result = res;
@@ -124,11 +123,12 @@ namespace Coupon.Controllers
             }
             var res = await _couponService.DeleteCoupon(coupon);
 
-            var service = new Stripe.CouponService();
-            service.Delete(coupon.CouponCode);
+           // var service = new Stripe.CouponService();
+           // service.Delete(coupon.CouponCode);
 
             _response.Result = res;
             return Ok(_response);
         }
+
     }
 }

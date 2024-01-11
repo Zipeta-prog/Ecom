@@ -6,6 +6,7 @@ C:\Users\USER\source\repos\Ecom-Ms\EcomMessageBus\obj\Debug\net7.0\EcomMessageBu
 C:\Users\USER\source\repos\Ecom-Ms\EcomMessageBus\obj\Debug\net7.0\EcomMessageBus.AssemblyInfoInputs.cache
 C:\Users\USER\source\repos\Ecom-Ms\EcomMessageBus\obj\Debug\net7.0\EcomMessageBus.AssemblyInfo.cs
 C:\Users\USER\source\repos\Ecom-Ms\EcomMessageBus\obj\Debug\net7.0\EcomMessageBus.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\Ecom-Ms\EcomMessageBus\obj\Debug\net7.0\EcomMessageBus.sourcelink.json
 C:\Users\USER\source\repos\Ecom-Ms\EcomMessageBus\obj\Debug\net7.0\EcomMessageBus.dll
 C:\Users\USER\source\repos\Ecom-Ms\EcomMessageBus\obj\Debug\net7.0\refint\EcomMessageBus.dll
 C:\Users\USER\source\repos\Ecom-Ms\EcomMessageBus\obj\Debug\net7.0\EcomMessageBus.pdb

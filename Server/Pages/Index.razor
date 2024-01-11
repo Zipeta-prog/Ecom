@@ -1,0 +1,12 @@
+﻿@page "/"
+@using Server.Models
+@using Server.Services
+
+<PageTitle>Index</PageTitle>
+
+
+@code{
+	public List<Product> Products { get; set; } = ProductService.Products.ToList();
+}
+
+<ProductList Products="Products" DisplayBuyButton="true"></ProductList>

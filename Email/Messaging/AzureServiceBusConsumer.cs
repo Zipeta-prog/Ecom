@@ -4,9 +4,10 @@ using Newtonsoft.Json;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.Json.Serialization;
-using EmailService.Service;
 using MailKit;
 using Email.Models.Dtos;
+using Email.Services;
+using MailService = Email.Services.MailService;
 
 namespace Email.Messaging
 {
@@ -23,8 +24,10 @@ namespace Email.Messaging
         public AzureServiceBusConsumer(IConfiguration configuration)
         {
             _configuration = configuration;
-            _connectionString = _configuration.GetValue<string>("AzureConnectionString");
-            _queueName = _configuration.GetValue<string>("QueueAndTopics:registerQueue");
+            //_connectionString = _configuration.GetValue<string>("AzureConnectionString");
+            _connectionString = _configuration.GetSection("AzureServices:AzureConnectionString").Value;
+            //_queueName = _configuration.GetValue<string>("QueueAndTopics:registerQueue");
+            _queueName = _configuration.GetSection("AzureServices:QueueAndTopics:registerQueue").Value;
 
             var client = new ServiceBusClient(_connectionString);
             _emailProcessor = client.CreateProcessor(_queueName);
@@ -59,15 +62,12 @@ namespace Email.Messaging
             var user = JsonConvert.DeserializeObject<UserMessageDto>(body);
 
             try
-            {
-                // send Email
-                // say you are done
+            { 
                 await arg.CompleteMessageAsync(arg.Message);
             }
             catch (Exception ex)
             {
                 throw;
-                // send an email to admin
             }
         }
     }

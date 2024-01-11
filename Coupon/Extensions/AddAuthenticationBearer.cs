@@ -1,7 +1,6 @@
 ﻿using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
-
 namespace Coupon.Extensions
 {
     public static class AddAuthenticationBearer
@@ -16,7 +15,6 @@ namespace Coupon.Extensions
                     ValidateAudience = true,
                     ValidateIssuer = true,
                     ValidateIssuerSigningKey = true,
-
 
                     ValidAudience = builder.Configuration.GetSection("JwtOptions:Audience").Value,
                     ValidIssuer = builder.Configuration.GetSection("JwtOptions:Issuer").Value,

@@ -2,10 +2,9 @@ using Auth.Data;
 using Auth.Models;
 using Auth.Services.IService;
 using Auth.Services;
+using Auth.Utilities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Auth.Utilities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,24 +15,20 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//connect to db
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("myconnection"));
-});
+}
+);
 
-//configure Identity Framework
-builder.Services.AddIdentity<Buyers, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
 
-//Add Auto Mapper
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
-//our Services
-builder.Services.AddScoped<IBuyer, BuyerService>();
-builder.Services.AddScoped<IJwt, JwtServices>();
-
-//configure JWTOptions Class
 builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("JwtOptions"));
+
+builder.Services.AddScoped<IUser, UserService>();
+builder.Services.AddScoped<IJwt, JwtService>();
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 
@@ -43,6 +38,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseHttpsRedirection();
 
 app.UseHttpsRedirection();
 

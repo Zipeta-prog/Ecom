@@ -1,8 +1,9 @@
 using Email.Data;
 using Email.Extensions;
 using Email.Messaging;
-using EmailService.Service;
+using Email.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +25,7 @@ builder.Services.AddSingleton(new EmailsService(optionsBuilder.Options));
 
 builder.Services.AddSingleton<IAzureServiceBusConsumer, AzureServiceBusConsumer>();
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -39,6 +41,5 @@ app.useAzure();
 app.UseAuthorization();
 
 app.MapControllers();
-
 
 app.Run();

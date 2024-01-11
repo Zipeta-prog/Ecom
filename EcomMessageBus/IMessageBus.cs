@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EcomMessageBus
 {
-    public interface IMessageBus
+    internal interface IMessageBus
     {
         Task PublishMessage(object message, string Topic_Queue_Name);
     }

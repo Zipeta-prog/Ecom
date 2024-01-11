@@ -5,6 +5,7 @@ C:\Users\USER\source\repos\Ecom-Ms\Email\obj\Debug\net7.0\Email.AssemblyInfo.cs
 C:\Users\USER\source\repos\Ecom-Ms\Email\obj\Debug\net7.0\Email.csproj.CoreCompileInputs.cache
 C:\Users\USER\source\repos\Ecom-Ms\Email\obj\Debug\net7.0\Email.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\USER\source\repos\Ecom-Ms\Email\obj\Debug\net7.0\Email.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\USER\source\repos\Ecom-Ms\Email\obj\Debug\net7.0\Email.sourcelink.json
 C:\Users\USER\source\repos\Ecom-Ms\Email\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\USER\source\repos\Ecom-Ms\Email\bin\Debug\net7.0\appsettings.json
 C:\Users\USER\source\repos\Ecom-Ms\Email\bin\Debug\net7.0\Email.exe

@@ -1,7 +1,7 @@
 using Coupon.Data;
 using Coupon.Extensions;
-using Coupon.Services;
 using Coupon.Services.IService;
+using Coupon.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,20 +13,17 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//Register AutoMapper
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-//custom services
-builder.AddAuth();
-builder.AddSwaggenGenExtension();
-
-//configure Database
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("myconnection"));
 });
 
-//register service for DI
 builder.Services.AddScoped<ICoupon, CouponService>();
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+builder.AddAuth();
+builder.AddSwaggenGenExtension();
 
 var app = builder.Build();
 
